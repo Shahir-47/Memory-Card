@@ -13,11 +13,11 @@
 
 ## Overview
 
-[Soccer Memory Game](https://app.netlify.com/sites/soccermemorygame/overview) is a fun and interactive web application where users test their memory by clicking on cards featuring some of the most famous soccer players in the world. The objective is simple: click on as many cards as possible without clicking on the same card more than once. The game tracks your score and best score, providing an addictive challenge to beat your previous records.
+[Soccer Memory Game](https://soccermemorygame.netlify.app/) is a fun and interactive web application where users test their memory by clicking on cards featuring some of the most famous soccer players in the world. The objective is simple: click on as many cards as possible without clicking on the same card more than once. The game tracks your score and best score, providing an addictive challenge to beat your previous records.
 
 The game fetches images of soccer players dynamically from the Giphy API, ensuring a unique experience each time you play. The cards reshuffle after every click, increasing the challenge of remembering which cards have already been clicked. The application is built with responsive design principles, making it accessible on different devices.
 
-Play the game [here](https://app.netlify.com/sites/soccermemorygame/overview).
+Play the game [here](https://soccermemorygame.netlify.app/).
 
 ![Soccer Memory Game](public/screenshot.png)
 
