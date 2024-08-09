@@ -1,5 +1,5 @@
 # Soccer Memory Game
-![image](https://github.com/user-attachments/assets/efc3d3cd-dfed-4654-bb69-2c383eb726ab)
+![image](https://github.com/user-attachments/assets/2b843873-5bfc-4c21-ab8e-559514850c0a)
 
 
 ## Table of Contents
@@ -101,7 +101,3 @@ http://localhost:5173/
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
-```
-
-```
