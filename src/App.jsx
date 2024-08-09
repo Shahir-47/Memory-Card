@@ -25,6 +25,14 @@ function App() {
 	const [bestScore, setBestScore] = useState(0);
 	const [clickedCards, setClickedCards] = useState([]);
 
+	// Load the best score from localStorage on component mount
+	useEffect(() => {
+		const savedBestScore = localStorage.getItem("bestScore");
+		if (savedBestScore) {
+			setBestScore(parseInt(savedBestScore, 10));
+		}
+	}, []);
+
 	useEffect(() => {
 		const fetchImages = async () => {
 			const cachedCards = JSON.parse(localStorage.getItem("cards"));
@@ -73,7 +81,12 @@ function App() {
 			// Update score and best score
 			const newScore = score + 1;
 			setScore(newScore);
-			setBestScore(Math.max(newScore, bestScore));
+
+			// Check and update best score
+			if (newScore > bestScore) {
+				setBestScore(newScore);
+				localStorage.setItem("bestScore", newScore);
+			}
 
 			// Add card to clickedCards array
 			setClickedCards([...clickedCards, title]);
