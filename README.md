@@ -1,6 +1,6 @@
 # Soccer Memory Game
-![image](https://github.com/user-attachments/assets/2b843873-5bfc-4c21-ab8e-559514850c0a)
 
+![image](https://github.com/user-attachments/assets/2b843873-5bfc-4c21-ab8e-559514850c0a)
 
 ## Table of Contents
 
@@ -18,6 +18,8 @@
 The game fetches images of soccer players dynamically from the Giphy API, ensuring a unique experience each time you play. The cards reshuffle after every click, increasing the challenge of remembering which cards have already been clicked. The application is built with responsive design principles, making it accessible on different devices.
 
 Play the game [here](https://soccermemorygame.netlify.app/).
+
+![Soccer Memory Game](public/screenshot.png)
 
 ## Features
 
