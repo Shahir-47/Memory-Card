@@ -27,31 +27,38 @@ function App() {
 
 	useEffect(() => {
 		const fetchImages = async () => {
-			const shuffledPlayers = players.sort(() => Math.random() - 0.5);
-			const newCards = await Promise.all(
-				shuffledPlayers.map(async (player, index) => {
-					try {
-						const response = await fetch(
-							`https://api.giphy.com/v1/gifs/search?api_key=szycGqcB8rOlGlfCts7hY3OoH1CqEDxJ&q=${player}&limit=1`
-						);
-						const data = await response.json();
-						const imageUrl = data.data[0]?.images?.original?.url || "";
-						return {
-							id: index,
-							image: imageUrl,
-							title: player,
-						};
-					} catch (error) {
-						console.error("Error fetching image for", player, error);
-						return {
-							id: index,
-							image: "",
-							title: player,
-						};
-					}
-				})
-			);
-			setCards(newCards);
+			const cachedCards = JSON.parse(localStorage.getItem("cards"));
+
+			if (cachedCards) {
+				setCards(cachedCards);
+			} else {
+				const shuffledPlayers = players.sort(() => Math.random() - 0.5);
+				const newCards = await Promise.all(
+					shuffledPlayers.map(async (player, index) => {
+						try {
+							const response = await fetch(
+								`https://api.giphy.com/v1/gifs/search?api_key=szycGqcB8rOlGlfCts7hY3OoH1CqEDxJ&q=${player}&limit=1`
+							);
+							const data = await response.json();
+							const imageUrl = data.data[0]?.images?.original?.url || "";
+							return {
+								id: index,
+								image: imageUrl,
+								title: player,
+							};
+						} catch (error) {
+							console.error("Error fetching image for", player, error);
+							return {
+								id: index,
+								image: "",
+								title: player,
+							};
+						}
+					})
+				);
+				setCards(newCards);
+				localStorage.setItem("cards", JSON.stringify(newCards));
+			}
 		};
 
 		fetchImages();
