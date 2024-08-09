@@ -1,0 +1,38 @@
+.footer {
+	background-color: #cc0e35;
+	color: #151515;
+	padding: 0.45rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.footer a {
+	color: #151515;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	color: white;
+}
+
+.github {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.github img {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.github:hover a {
+	color: white;
+}
+
+.github:hover img {
+	filter: invert(1);
+}

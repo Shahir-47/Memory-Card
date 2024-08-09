@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header.jsx";
 import List from "./components/List.jsx";
+import Footer from "./components/Footer.jsx";
 import "./App.css";
 
 let players = [
@@ -11,18 +12,10 @@ let players = [
 	"Mohamed Salah",
 	"Robert Lewandowski",
 	"Kevin De Bruyne",
-	"Harry Kane",
 	"Luka Modrić",
-	"Sadio Mané",
 	"Sergio Ramos",
 	"Virgil van Dijk",
-	"Alisson Becker",
-	"Thibaut Courtois",
-	"Joshua Kimmich",
 	"Toni Kroos",
-	"Manuel Neuer",
-	"Karim Benzema",
-	"Casemiro",
 	"Eden Hazard",
 ];
 
@@ -87,7 +80,12 @@ function App() {
 	return (
 		<>
 			<Header score={score} bestScore={bestScore} />
+			<p style={{ color: "#c0b8ba" }}>
+				Click on a card to earn points, but don&apos;t click on any card more
+				than once!
+			</p>
 			<List cards={cards} onCardClick={handleCardClick} />
+			<Footer />
 		</>
 	);
 }

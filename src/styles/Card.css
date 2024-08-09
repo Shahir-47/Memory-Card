@@ -7,13 +7,12 @@
 	background-color: #1a1a1a;
 	border-radius: 8px;
 	box-shadow: 0 0 1em #000000aa;
-	transition: transform 300ms;
 	border: 1px solid #a91d3a;
 	cursor: pointer;
 }
 
 .card:hover {
-	transform: scale(1.05);
+	box-shadow: 0 0 2em #a91d3a;
 }
 
 .card img {
@@ -21,4 +20,8 @@
 	height: 300px;
 	object-fit: cover;
 	border-radius: 8px;
+}
+
+.card h2 {
+	margin-bottom: 0;
 }

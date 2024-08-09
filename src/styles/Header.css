@@ -7,3 +7,18 @@ header {
 	color: #cc0e35;
 	border-bottom: 4px ridge #cc0e35;
 }
+
+.score-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	color: #c0b8ba;
+}
+
+.header h2 {
+	font-size: 2.2rem;
+}
+
+header * {
+	margin: 0;
+}
