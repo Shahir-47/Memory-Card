@@ -87,7 +87,7 @@ function App() {
 	return (
 		<>
 			<Header score={score} bestScore={bestScore} />
-			<p style={{ color: "#c0b8ba" }}>
+			<p style={{ color: "#c0b8ba", padding: "0 1rem" }}>
 				Click on a card to earn points, but don&apos;t click on any card more
 				than once!
 			</p>
