@@ -1,7 +1,6 @@
 # Soccer Memory Game
+![image](https://github.com/user-attachments/assets/efc3d3cd-dfed-4654-bb69-2c383eb726ab)
 
-![Soccer Memory Game](![image](https://github.com/user-attachments/assets/f9e8b829-f5ba-400e-a2dc-3d88513a5aaa)
-)
 
 ## Table of Contents
 
